@@ -1,32 +1,16 @@
-<?php
-include('db_connection.php');
-
-$sql = "SELECT * FROM votre_table";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Web avec SQL Server</title>
-</head>
-<body>
-
-    <h1>Données de la base de données</h1>
-
-    <?php
-    if ($result->rowCount() > 0) {
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            echo "<p>" . $row['nom_colonne'] . ": " . $row['autre_colonne'] . "</p>";
-        }
-    } else {
-        echo "Aucun résultat trouvé";
-    }
-
-    $conn = null; // Fermer la connexion
-    ?>
-
-</body>
+<html>
+  <head>
+    <title>Mon Projet DB</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Données des Personnes</h1>
+    <div id="data-table">
+      <!-- Le tableau des données sera ici -->
+    </div>
+    <form action="update.php" method="post">
+      <!-- Formulaire de mise à jour des données -->
+    </form>
+  </body>
 </html>
