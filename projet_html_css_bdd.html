@@ -1,0 +1,32 @@
+<?php
+include('db_connection.php');
+
+$sql = "SELECT * FROM votre_table";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Web avec SQL Server</title>
+</head>
+<body>
+
+    <h1>Données de la base de données</h1>
+
+    <?php
+    if ($result->rowCount() > 0) {
+        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            echo "<p>" . $row['nom_colonne'] . ": " . $row['autre_colonne'] . "</p>";
+        }
+    } else {
+        echo "Aucun résultat trouvé";
+    }
+
+    $conn = null; // Fermer la connexion
+    ?>
+
+</body>
+</html>
