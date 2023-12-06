@@ -1,0 +1,20 @@
+version: '3.3'
+name: de2revisions
+services:
+
+
+    #serveur de base de donnees
+    database:
+       image: 'mariadb:latest'
+       container_name: mariadb-TD1-Revisions
+       restart: always
+       environment:
+         - MYSQL_USER=user
+         - MYSQL_PASSWORD=test
+         - MYSQL_DATABASE=REVISIONS
+         - MYSQL_ROOT_PASSWORD=test
+        
+       ports:
+           - '3306:3306'
+       #volumes:
+        #- ./mariadb10:/var/lib/mysql # si je mets un volume il faut créer les db user à la main
