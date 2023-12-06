@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+main{
+    display: flex;
+    overflow: hidden;
+    background-color: #e7e6e6;
+}
+.tabs{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    height: 100vh;
+    width: 250px;
+}
+.tabs a{
+    padding: 4px 15px;
+    text-decoration: none;
+    color: black;
+}
+.tabs a:link {
+color: black;
+}
+.tabs a:hover{
+    background-color: rgb(201, 199, 199);
+    transform: scale(1.05);
+}
+.selected{
+    background-color: rgb(53, 52, 52);
+    color: #e7e6e6!important;
+    transform: scale(1.05);
+}
+.selected:hover{
+    background-color: rgb(67, 66, 66)!important;
+    color: #e7e6e6!important;
+}
+.tab{
+    padding: 25px;
+    display: flex;
+    width: 100%;
+    gap: 25px;
+}
+.employees-info{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    background-color: rgb(53, 52, 52);
+    color: #e7e6e6;
+    padding: 0 25px;
+    border-radius: 15px;
+    flex: 1;
+}
+.employee{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.employee:hover{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(67, 66, 66);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.employee-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.global-info{
+    display: flex;
+    flex-direction: column;
+    color: #e7e6e6;
+    background-color: rgb(53, 52, 52);
+    padding: 0 25px;
+    border-radius: 15px;
+    flex: 1;
+}
