@@ -1,3 +1,6 @@
+
+https://github.com/falqlp/html-css-bdd/assets/136916564/8b50fce5-29ae-4dbe-81b2-62b3a536b529
+
 Pour exécuter le projet en local, il faut :
     ●	Télécharger le serveur web local Wamp (lien disponible https://www.wampserver.com/en/download-wampserver-64bits/).
     ●	Installer Wamp.
@@ -14,3 +17,4 @@ Pour ce faire, réaliser les manipulations suivantes :
         ●	Si le serveur de base de données MariaDB n’est pas installé sur votre local, vous pouvez installer docker est exécuter le fichier docker-compose avec la ligne de commande “docker compose up --build”. Il faut pour cela que le port 3306 soit disponible.
         ●	Exécuter le script de création de la base de données disponible dans le fichier “objects.txt“
         ●	Lancer dans le navigateur de votre choix le lien “localhost/html-css-bdd“
+
